@@ -34,6 +34,25 @@ public class Choir {
         */
 
 
+    public static int choir(int n, int[] arr, int k, int d) {
+
+        long dp[][] = new long[n + 1][k + 1];
+        long g[][] = new long[n + 1][k + 1];
+
+        for (int i = 1; i <= n; i++) {
+            dp[i][1] = arr[1];
+            g[i][1] = arr[1];
+        }
+
+        for (int i = 2; i <= n; i++) {
+            for (int j = i; j <= n; j++) {
+                long max = Long
+            }
+        }
+
+
+
+    }
 
 
 
@@ -41,6 +60,16 @@ public class Choir {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             int n = scanner.nextInt();
+            int[] arr = new int[n + 1];
+
+            for (int i = 1; i <= n; i++) {
+                arr[i] = scanner.nextInt();
+            }
+            int k = scanner.nextInt();
+            int d = scanner.nextInt();
+
+
+
         }
 
     }

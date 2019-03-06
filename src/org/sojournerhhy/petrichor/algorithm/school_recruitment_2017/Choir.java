@@ -34,23 +34,45 @@ public class Choir {
         */
 
 
-    public static int choir(int n, int[] arr, int k, int d) {
+    public static long choir(int n, int[] arr, int k, int d) {
 
         long dp[][] = new long[n + 1][k + 1];
+
+        // n个选k个能力值乘积的最小值数组
         long g[][] = new long[n + 1][k + 1];
+
+        long result = Long.MIN_VALUE;
 
         for (int i = 1; i <= n; i++) {
             dp[i][1] = arr[1];
             g[i][1] = arr[1];
         }
 
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= k; i++) {
             for (int j = i; j <= n; j++) {
-                long max = Long
+                long max = Long.MAX_VALUE;
+                long min = Long.MIN_VALUE;
+
+                for (int left = Math.max(k - 1, j - d); left <= j - 1; left++) {
+                    if (max < Math.max(dp[left][i - 1] * arr[j], g[left][i - 1] * arr[j])) {
+                        max = Math.max(dp[left][i - 1] * arr[j], g[left][i - 1] * arr[j]);
+                    }
+                    if (min > Math.min(dp[left][i - 1] * arr[j], g[left][i - 1] * arr[j])) {
+                        min = Math.min(dp[left][i - 1] * arr[j], g[left][i - 1] * arr[j]);
+                    }
+                    dp[j][i] = max;
+                    g[j][i] = min;
+                }
+
             }
+            for (i = k; i <= n; i++) {
+                if (result < dp[i][k]) {
+                    result = dp[i][k];
+                }
+            }
+            System.out.println(result);
         }
-
-
+        return result;
 
     }
 
@@ -67,6 +89,7 @@ public class Choir {
             }
             int k = scanner.nextInt();
             int d = scanner.nextInt();
+            System.out.println(choir(n, arr, k, d));
 
 
 

@@ -3,7 +3,7 @@ package org.sojournerhhy.petrichor.designpatterns.singleton;
 /**
  * Description: 饿汉模式，类加载时完成初始化
  *
- * @author hanhongying@corp.netease.com
+ * @author 陌北有棵树
  * @version 2019/3/6
  */
 public class SingletonOne {

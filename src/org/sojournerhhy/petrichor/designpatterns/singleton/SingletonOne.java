@@ -18,4 +18,6 @@ public class SingletonOne {
     public static SingletonOne getInstance() {
         return instance;
     }
+
+
 }

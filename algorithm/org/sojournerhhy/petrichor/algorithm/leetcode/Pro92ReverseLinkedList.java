@@ -1,11 +1,11 @@
 package org.sojournerhhy.petrichor.algorithm.leetcode;
 
-import org.sojournerhhy.petrichor.algorithm.common.ListNode;
+import org.sojournerhhy.petrichor.algorithm.common.object.ListNode;
 
 /**
  * Description:
  *
- * @author hanhongying@corp.netease.com
+ * @author 陌北有棵树
  * @version 2019/3/5
  */
 public class Pro92ReverseLinkedList {

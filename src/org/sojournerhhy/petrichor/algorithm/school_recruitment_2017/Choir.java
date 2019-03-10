@@ -3,7 +3,7 @@ package org.sojournerhhy.petrichor.algorithm.school_recruitment_2017;
 import java.util.Scanner;
 
 /**
- * Description:
+ * Description: 合唱团
  *
  * @author 陌北有棵树
  * @version 2019/3/6

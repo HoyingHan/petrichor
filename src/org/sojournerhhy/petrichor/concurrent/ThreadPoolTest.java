@@ -49,7 +49,9 @@ public class ThreadPoolTest {
                     try {
                         System.out.println(index);
                         Thread.sleep(2000);
+                        throw new InterruptedException();
                     } catch (InterruptedException e) {
+                        System.out.println("InterruptedException Catch");
                         e.printStackTrace();
                     }
                 }

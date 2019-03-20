@@ -3,7 +3,7 @@ package org.sojournerhhy.petrichor.sort;
 /**
  * Description:
  *
- * @author hanhongying@corp.netease.com
+ * @author 陌北有棵树
  * @version 2019/3/5
  */
 public class HeapSort {
